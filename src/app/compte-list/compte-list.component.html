@@ -1,0 +1,31 @@
+
+
+
+<h4><a [routerLink]="['../add']">Ajouter Utilisateur</a></h4>
+
+<table>
+      <thead>
+         <tr>
+            <th>#ID</th>
+            <th>Name</th>
+            <th>Firstname</th>
+            <th>Date Naissance</th>
+            <th>Date Création</th>
+            <th>Action</th>
+         </tr>
+      </thead>
+      <tbody>
+
+<tr *ngFor="let c of comptes">
+	<th>{{c.id}}
+	<td>{{c.name}}</td>
+	<td>{{c.firstname}}</td>
+	<td>{{c.date_naissance}}</td>
+	<td>{{c.date_creation}}</td>
+ <!--  <div class="col-md-2"><button class="btn btn-danger" (click)="delete(std)">DELETE</button></div> -->
+ 
+   <td><a [routerLink]="['../edit',c.id]">Edit</a></td>
+   <td><a class="btn btn-danger" [routerLink]="['../delete',c.id]">DELETE</a></td>
+         </tr>
+      </tbody>
+   </table>
