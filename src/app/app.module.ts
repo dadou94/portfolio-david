@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { SwiperModule } from 'swiper/angular';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompteListComponent } from './compte-list/compte-list.component';
@@ -18,12 +20,15 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { authInterceptorProviders } from '../_helpers/auth.interceptor';
+import { SlideShowComponent } from './slide-show/slide-show.component';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { ServicesComponent } from './services/services.component';
 
 
 @NgModule({
 
  imports: [
-    BrowserModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule, FormsModule
+    BrowserModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule, FormsModule, NgxUsefulSwiperModule
   ],
 
   declarations: [
@@ -39,7 +44,9 @@ import { authInterceptorProviders } from '../_helpers/auth.interceptor';
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    SlideShowComponent,
+    ServicesComponent
     
   ],
  

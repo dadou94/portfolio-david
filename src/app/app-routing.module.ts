@@ -4,7 +4,7 @@ import { CompteListComponent } from "./compte-list/compte-list.component";
 import { EditCompteComponent } from "./edit-compte/edit-compte.component";
 import { DeleteCompteComponent } from './delete-compte/delete-compte.component';
 import { AddCompteComponent } from './add-compte/add-compte.component';
-import { IndexComponent } from './index/index.component';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -15,18 +15,14 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 
 const routes: Routes = [
 
-//{ path: '', component: IndexComponent },
+
 { path: 'pageList', component: CompteListComponent },
 { path: 'edit/:id', component: EditCompteComponent },
 { path: 'delete/:id', component: DeleteCompteComponent },
 { path: 'add', component: AddCompteComponent },
 { path: 'home', component: HomeComponent },
-{ path: 'login', component: LoginComponent },
-{ path: 'register', component: RegisterComponent },
-{ path: 'profile', component: ProfileComponent },
-{ path: 'user', component: BoardUserComponent },
-{ path: 'mod', component: BoardModeratorComponent },
-{ path: 'admin', component: BoardAdminComponent },
+
+
 { path: '', redirectTo: 'home', pathMatch: 'full' }
 
 ];

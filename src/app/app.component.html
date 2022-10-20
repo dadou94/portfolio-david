@@ -1,68 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    ...
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
+  <head >
+
+  </head> 
+
+    <body >
+
+<div class="nav-top" >
+   
 
 
-<div style="text-align:center">
-  <h1>
-    Audition et Domicile 
-  </h1>
-  <h2>Votre audioprothésiste mobile en France métropolitaine</h2>
-  <hr>
-<nav> <a [routerLink]="['/']">Accueil</a> | <a [routerLink]="['/pageList']">Page 1</a> </nav>
-<hr>
+<div class="navbar-brand" style="text-align:center">
+ 
+  <img  src="/assets/DA.png" style="width:140px">
+   
+  <ul class="topnav">
+    
+    <li><a class="active" href="#apropos">A propos de moi</a> </li>
+    <li><a href="#realisation">Services</a></li>
+    <li><a href="#contact">Blogs</a></li>
+    <li class="right"><a href="#contact" style="  transform: translate(0px, 0px) scale(1, 1);  color: #006ddb;font-size: 16px;font-weight: 500;letter-spacing: -0.025em;text-decoration: none;white-space: nowrap;">Contactez-moi <div _ngcontent-oyf-c7="" class="cta-link-icon w-embed"><svg _ngcontent-oyf-c7="" width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-oyf-c7="" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.5" stroke="currentColor" d="M8 20L16 12L8 4"></path></svg></div></a></li>
+  </ul>
+
+
+</div>
+</div>
+<!-- <div class="portfolio" >
+   <h1 style="color: #fff; padding-top:30px; margin-left: 210px;">Portfolio</h1>
+</div>
+ -->
+ 
+
+<div class="slide">
+
+  <app-slide-show></app-slide-show>
 </div>
 
-<app-index></app-index>
 
-<div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">bezKoder</a>
-    <ul class="navbar-nav mr-auto" routerLinkActive="active">
-      <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
-      </li>
-      <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
-      </li>
-      <li class="nav-item" *ngIf="showModeratorBoard">
-        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
-      </li>
-      <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-      <li class="nav-item">
-        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a href="/login" class="nav-link" routerLink="login">Login</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-      <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-      </li>
-      <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">LogOut</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</div>
 
+ <app-home></app-home>
+  
+ <app-services></app-services>
 <!-- <app-compte-list></app-compte-list> -->
 
 
