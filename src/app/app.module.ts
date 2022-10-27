@@ -23,12 +23,14 @@ import { authInterceptorProviders } from '../_helpers/auth.interceptor';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { ServicesComponent } from './services/services.component';
+import { ContactEditorComponent } from './contact-editor/contact-editor.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
 
  imports: [
-    BrowserModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule, FormsModule, NgxUsefulSwiperModule
+    BrowserModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule, FormsModule, NgxUsefulSwiperModule, RouterModule
   ],
 
   declarations: [
@@ -46,7 +48,8 @@ import { ServicesComponent } from './services/services.component';
     BoardModeratorComponent,
     BoardUserComponent,
     SlideShowComponent,
-    ServicesComponent
+    ServicesComponent,
+    ContactEditorComponent
     
   ],
  

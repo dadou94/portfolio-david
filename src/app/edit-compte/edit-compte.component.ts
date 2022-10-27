@@ -49,13 +49,13 @@ this.name = new FormControl("", [Validators.required, Validators.minLength(5)]);
       console.log(id);
      });
 
-  this.refreshUser(id)
+  this.refreshUser(id);
     
-this.userForm.controls["Id"].setValue(this.user.Id );
+/* this.userForm.controls["Id"].setValue(this.user.Id );
  this.userForm.controls["firstname"].setValue(this.user.name );
   this.userForm.controls["name"].setValue(this.user.firstname);
 
-  
+   */
 
 
 }

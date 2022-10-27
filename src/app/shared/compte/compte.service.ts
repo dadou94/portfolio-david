@@ -3,16 +3,13 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../user';
 import {HttpParams} from "@angular/common/http";
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompteService{
-
-
-idUser: string;
 
   constructor(private http: HttpClient) { }
 
