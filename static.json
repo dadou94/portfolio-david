@@ -1,0 +1,18 @@
+{
+    "root": "dist/",
+    "encoding": "UTF-8",
+    "clean_urls": true,
+
+    "routes": {
+        "/assets/*": "/assets/",
+        "/**": "index.html"
+      },
+
+      "error_page": "errors/error.html",
+
+      "proxies": {
+        "/api/": {
+          "origin": " https://pacific-caverns-79994.herokuapp.com/"
+        }
+      }
+  }
