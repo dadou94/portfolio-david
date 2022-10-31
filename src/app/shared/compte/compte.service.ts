@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { User } from '../user';
 import {HttpParams} from "@angular/common/http";
 // import 'rxjs/add/operator/map';
+import {environment} from "../../../environments/environment";
 
 
 @Injectable({
@@ -11,10 +12,12 @@ import {HttpParams} from "@angular/common/http";
 })
 export class CompteService{
 
+  baseUrl = environment.baseUrl;
+
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get('http://localhost:9090/api/users');
+    return this.http.get(this.baseUrl + 'api/users');
   }
 
 
@@ -31,11 +34,11 @@ export class CompteService{
 
 	 
 
-    return this.http.get<User>('http://localhost:9090/api/users/edit',options);
+    return this.http.get<User>(this.baseUrl + 'api/users/edit',options);
 }
 
   createUser(user: User):  Observable<any> {
-      return this.http.post('http://localhost:9090/api/users/create', user);
+      return this.http.post(this.baseUrl + 'api/users/create', user);
   }
 
 
@@ -51,7 +54,7 @@ export class CompteService{
 
 
 
-  return this.http.put('http://localhost:9090/api/users/update', user, options);
+  return this.http.put(this.baseUrl + 'api/users/update', user, options);
   }
 
 
@@ -64,7 +67,7 @@ export class CompteService{
     params: new HttpParams().set('id', idUser)
     };
 
-     return this.http.delete('http://localhost:9090/api/users/delete',options);
+     return this.http.delete(this.baseUrl + 'api/users/delete',options);
 
   }
 
